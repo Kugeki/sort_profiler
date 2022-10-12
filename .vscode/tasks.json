@@ -4,7 +4,7 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "gnuplot",
+            "label": "Run gnuplot script",
             "type": "process",
             "command": "gnuplot",
             "args": ["--persist", "${file}"],
@@ -16,7 +16,23 @@
             },
             "group": {
                 "kind": "build",
-                "isDefault": true
+                "isDefault": "**.plt"
+            },
+        },
+        {
+            "label": "Run ruby project",
+            "type": "shell",
+            "command": "rake",
+            "args": ["run"],
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "revealProblems": "onProblem",
+                "close": false
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": "**.rb"
             },
         }
     ]
