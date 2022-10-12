@@ -1,0 +1,9 @@
+inherit_from:
+  - .rubocop_todo.yml
+
+Lint/Debugger:
+  Enabled: true
+  Exclude: []
+
+AllCops:
+  NewCops: enable
