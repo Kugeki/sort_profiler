@@ -1,0 +1,15 @@
+# Ignore program results
+/data/
+/graphs/
+
+# Ignore gnuplot fit.log
+fit.log
+
+# Dependency directories
+node_modules/
+
+package-lock.json
+
+.husky
+package.json
+commitlint.config.js
