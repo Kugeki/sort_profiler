@@ -1,0 +1,74 @@
+
+
+*******************************************************************************
+Wed Oct 12 10:22:38 2022
+
+
+FIT:    data read from data_file_selection_sort
+        format = z
+        x range restricted to [* : 70000.0]
+        #datapoints = 19
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f_selection_sort(x)
+	f_selection_sort(x) = a_selection_sort*x**n_selection_sort
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a_selection_s n_selection_s
+   0 2.2936660707e+08   0.00e+00  3.91e+04    1.000000e+00   1.000000e+00
+ 768 1.6185245990e+05  -1.34e-03  3.91e-01    2.388755e-04   1.841899e+00
+
+After 768 iterations the fit converged.
+final sum of squares of residuals : 161852
+rel. change during last iteration : -1.34179e-08
+
+degrees of freedom    (FIT_NDF)                        : 17
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 97.5742
+variance of residuals (reduced chisquare) = WSSR/ndf   : 9520.73
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a_selection_sor = 0.000238875      +/- 8.042e-05    (33.67%)
+n_selection_sor = 1.8419           +/- 0.037        (2.009%)
+
+correlation matrix of the fit parameters:
+                a_sele n_sele 
+a_selection_sor 1.000 
+n_selection_sor-1.000  1.000 
+
+
+*******************************************************************************
+Wed Oct 12 10:22:39 2022
+
+
+FIT:    data read from data_file_bubble_sort
+        format = z
+        x range restricted to [* : 70000.0]
+        #datapoints = 19
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f_bubble_sort(x)
+	f_bubble_sort(x) = a_bubble_sort*x**n_bubble_sort
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a_bubble_sort n_bubble_sort
+   0 2.1939703886e+08   0.00e+00  3.91e+04    1.000000e+00   1.000000e+00
+ 768 3.5222967398e+03  -3.65e-01  3.91e-01    6.319265e-05   1.993830e+00
+
+After 768 iterations the fit converged.
+final sum of squares of residuals : 3522.3
+rel. change during last iteration : -3.64725e-06
+
+degrees of freedom    (FIT_NDF)                        : 17
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 14.3942
+variance of residuals (reduced chisquare) = WSSR/ndf   : 207.194
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a_bubble_sort   = 6.31927e-05      +/- 3.208e-06    (5.077%)
+n_bubble_sort   = 1.99383          +/- 0.005568     (0.2793%)
+
+correlation matrix of the fit parameters:
+                a_bubb n_bubb 
+a_bubble_sort   1.000 
+n_bubble_sort  -1.000  1.000 

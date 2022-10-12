@@ -1,0 +1,21 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    cgi (0.3.3)
+    erb (2.2.3)
+      cgi
+    minitest (5.16.3)
+    minitest-power_assert (0.3.1)
+      minitest
+      power_assert (>= 1.1)
+    power_assert (2.0.1)
+
+PLATFORMS
+  x64-mingw-ucrt
+
+DEPENDENCIES
+  erb
+  minitest-power_assert
+
+BUNDLED WITH
+   2.3.23
