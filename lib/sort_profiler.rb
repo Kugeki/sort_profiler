@@ -58,9 +58,7 @@ class SortProfiler
     sort_functions = SortFunctions.names # required in template
     template_file = 'templates/single_plot.erb'
     render = ERB.new(File.read(template_file))
-    File.open('graphs/single_graph.plt', 'w') do |f|
-      f.write render.result(binding)
-    end
+    File.write('graphs/single_graph.plt', render.result(binding))
   end
 
   def create_graph_scripts
@@ -68,9 +66,7 @@ class SortProfiler
     results.each_key do |sort_name|
       template_file = 'templates/plot.erb'
       render = ERB.new(File.read(template_file))
-      File.open("graphs/#{sort_name}_graph.plt", 'w') do |f|
-        f.write render.result(binding)
-      end
+      File.write("graphs/#{sort_name}_graph.plt", render.result(binding))
     end
   end
 end

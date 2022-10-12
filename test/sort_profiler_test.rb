@@ -22,7 +22,7 @@ describe 'Sort profiler tests' do
 
   it 'should have ((to - from) / step) + 1 entrances in results for every sort' do
     SortFunctions.names.each do |sort_name|
-      assert (@sort_profiler.results[sort_name].size == ((@to - @from) / @step + 1)), sort_name
+      assert (@sort_profiler.results[sort_name].size == (((@to - @from) / @step) + 1)), sort_name
     end
   end
 
