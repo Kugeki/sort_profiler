@@ -9,6 +9,7 @@ class String
 end
 
 # rubocop:disable Style/ClassVars
+# TODO: change this class to module according to Ruby Style Guide.
 # ...
 class SortFunctions
   @@sort_functions = Set.new

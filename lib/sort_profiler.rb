@@ -7,6 +7,7 @@ require 'erb'
 require_relative 'sort_functions'
 
 # GraphStyle, describe_sort, etc.
+# TODO: Refactor this class. Also need to write documentation.
 
 # random array
 class Array
@@ -37,6 +38,7 @@ class SortProfiler
   def profile_sort(sort_name)
     puts sort_name
     results[sort_name] ||= {}
+    # TODO: Need to make unified seed for random. Also multithread needed?
     (from..to).step(step).each do |n|
       time = Benchmark.measure do
         SortFunctions.call_sort sort_name, Array.random(n)
@@ -47,6 +49,7 @@ class SortProfiler
 
   def create_files_with_results
     results.each do |sort_name, profile_stats|
+      # TODO: Unify paths. Maybe need to use project path. And from it build other paths.
       file = File.open("./data/#{sort_name}_data.txt", 'w')
       profile_stats.each { |n, time| file.write "#{n} #{time}\n" }
     end
