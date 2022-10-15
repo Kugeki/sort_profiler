@@ -30,7 +30,9 @@ class SortProfiler
   end
 
   def profile(names = SortFunctions.names)
+    seed = Time.now.to_i # Unified seed for all sort functions.
     names.each do |sort_name|
+      srand seed
       profile_sort(sort_name)
     end
   end
@@ -38,7 +40,7 @@ class SortProfiler
   def profile_sort(sort_name)
     puts sort_name
     results[sort_name] ||= {}
-    # TODO: Need to make unified seed for random. Also multithread needed?
+    # TODO: Multithread needed?
     (from..to).step(step).each do |n|
       time = Benchmark.measure do
         SortFunctions.call_sort sort_name, Array.random(n)
