@@ -7,7 +7,7 @@ set ylabel "Время сортировки, мс"
 set xrange [*:70000]
 
 <% sort_functions.each do |item| %>
-data_file_<%= item %> = "D:/ruby/sort_profiler/data/<%= item %>_data.txt"
+data_file_<%= item %> = "D:/ruby/sort_profiler/data/<%= id %>/<%= item %>_data.txt"
 f_<%= item %>(x) = a_<%= item %>*x**n_<%= item %>
 fit f_<%= item %>(x) data_file_<%= item %> via a_<%= item %>, n_<%= item %>
 <% end %>
